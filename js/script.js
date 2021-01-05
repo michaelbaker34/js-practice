@@ -61,11 +61,11 @@ function coldWeather(temp) {
 //Create a function that makes your $100k Tesla speed until the police are looking
 
 function gottaGoFast() {
-    var speed = console.log("We are speeding!");
+    var speed = "We are speeding!";
     var policeRadar = false;
 
     do {
-        speed;
+        console.log(speed);;
     } while (policeRadar === false);
 }
 
@@ -117,10 +117,53 @@ var beverages = {
     isOpen: true
 };
 
-    beverages.brandName = "Home";
+    beverages.brandName = "Homebrew";
     beverages.type = "Coffee";
     beverages.volumeInLiters = 2;
     beverages.priceInCents = .5;
     beverages.expirationDate = "Today";
     beverages.datesOfPreviousSips = ["26 May", "04 June", "03 July"];
     beverages.isOpen = true;
+
+    var users = [
+        {
+            givenName: "Sam",
+            age: 21
+        },
+        {
+            givenName: "Cathy",
+            age: 34
+        },
+        {
+            givenName: "Karen",
+            age: 43
+        }
+    ]
+
+// console.log(users[0].givenName + " " + users[1].givenName + " " + users[2].givenName);
+// users[0].givenName = "John Doe";
+// users[1].givenName = "John Doe";
+// users[2].givenName = "John Doe";
+// console.log(users[0].givenName + " " + users[1].givenName + " " + users[2].givenName);
+// users[0].age += 1;
+// users[1].age += 1;
+// users[2].age += 1;
+// console.log(users[0].age + " " + users[1].age + " " + users[2].age);
+
+// for (var i = 0; i < users.length; i++) {
+//     console.log(users[i].givenName);
+// }
+
+users.forEach(function (name) {
+    console.log(name.givenName);
+})
+
+users.forEach(function (rename) {
+    rename.givenName = "John Doe";
+});
+
+users.forEach(function (increaseAge) {
+    increaseAge.age += 1;
+});
+
+// console.log(users);
