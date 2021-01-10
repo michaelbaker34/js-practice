@@ -167,3 +167,47 @@ users.forEach(function (increaseAge) {
 });
 
 // console.log(users);
+
+var dog = {}
+dog.breed = "Big Dog";
+dog.weightInPounds = 60;
+dog.age = 4;
+dog.color = "Red";
+dog.canBreed = true;
+dog.shotRecords = [
+    {
+    shotType: "Good Dog Shot",
+    shotDate: "12 November 2018",
+    },
+    {
+    shotType: "Strong Dog Shot",
+    shotDate: "20 June 2019"
+    }
+];
+dog.bark = function () {
+    console.log("Woof!");
+};
+
+dog.getOlder = function getOlder() {
+    this.age += 1;
+};
+
+dog.disableBreeding = function () {
+    this.canBreed = false;
+};
+
+dog.vaccinate = function vaccinate(nameOfVaccination) {
+    var newShot = {
+        shotType: nameOfVaccination,
+        shotDate: new Date()
+    };
+    dog.shotRecords.push(newShot);
+};
+
+dog.bark();
+dog.getOlder();
+console.log(dog.age);
+dog.disableBreeding();
+console.log(dog.canBreed);
+dog.vaccinate("New Vaccine");
+console.log(dog.shotRecords);
