@@ -68,17 +68,38 @@ function firstAndSecond(x) {
 // Write a function definition named firstAndLast that takes in sequence
 // and returns the first and last value of that sequence as an array
 
-
+function firstAndLast(x) {
+    var first = x[0];
+    var last = x[x.length - 1];
+    var newArr = [first, last];
+  
+  return newArr;
+}
 
 // Exercise 59
 // Write a function definition named firstToLast that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
 
-
+function firstToLast(x) {
+    var newArr = [];
+    var arrShift = x.shift();
+  
+    newArr = x.push(arrShift);
+  
+  return x;
+  }
 
 // Exercise 60
 // Write a function definition named sumAll that takes in sequence of numbers and returns all the numbers added together.
 
-
+function sumAll(x) {
+    var i = 0
+    
+    x.forEach(function(element) {
+    i += element;  
+    });
+  
+    return i;  
+}
 
 //  Exercise 61
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
