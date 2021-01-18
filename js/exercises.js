@@ -124,7 +124,7 @@ function mean(x) {
 }
 
 // Exercise 62
-// Write a function definition named median that takes in sequence of numbers and returns the average value
+// Write a function definition named median that takes in sequence of numbers and returns the median value
 
 function median(x) {
     var sortArr = x.sort();
@@ -136,9 +136,16 @@ function median(x) {
 
 
 // Exercise 63
-// Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus theminimum.
+// Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus the minimum.
 
-
+function maxMinusMin(x) {
+    var sortArr = x.sort();
+    var max = x[x.length - 1];
+    var min = x[0];
+    var difference = parseInt(max) - parseInt(min);
+    
+    return difference;
+  }
 
 // Exercise 64
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
