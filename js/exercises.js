@@ -127,10 +127,13 @@ function mean(x) {
 // Write a function definition named median that takes in sequence of numbers and returns the average value
 
 function median(x) {
-    x.sort(function (a,b) {
-        return a - b;
-    });
+    var sortArr = x.sort();
+    var middleElement = Math.ceil(x.length / 2);
+    var medianElement = x.length % 2 == 0 ? (sortArr[middleElement] + sortArr[middleElement - 1]) / 2 : sortArr[middleElement - 1];
+  
+    return medianElement
 }
+
 
 // Exercise 63
 // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus theminimum.
