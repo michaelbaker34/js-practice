@@ -91,37 +91,37 @@ function firstToLast(x) {
 // Exercise 60
 // Write a function definition named sumAll that takes in sequence of numbers and returns all the numbers added together.
 
-// function sumAll(x) {
-//     var i = 0
-    
-//     x.forEach(function(element) {
-//     i += element;  
-//     });
-  
-//     return i;  
-// }
-
 function sumAll(x) {
     var sum = x.reduce((a, b) => a + b, 0);
     return sum;
 }
 
+// function sumAll(x) {
+//     var i = 0
+//     x.forEach(function(element) {
+//     i += element;  
+//     });
+//     return i;  
+// }
+
+
 //  Exercise 61
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
 
+function mean(x) {
+    var sum = x.reduce((a, b) => a + b, 0) / x.length;
+    return sum;
+}
+
 // function mean(x) {
 //     var i = 0;
-    
 //     x.forEach(function(element) {
 //       i += element;
 //     })
 //     return i / x.length;
 //   }
 
-function mean(x) {
-    var sum = x.reduce((a, b) => a + b, 0) / x.length;
-    return sum;
-}
+
 
 // Exercise 62
 // Write a function definition named median that takes in sequence of numbers and returns the median value
@@ -150,7 +150,9 @@ function maxMinusMin(x) {
 // Exercise 64
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
 
-
+function productOfAll(x) {
+    
+}
 
 // Exercise 65
 // Write a function definition named getHighestNumber that takes in sequence of numbers and returns the largest number.
