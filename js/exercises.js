@@ -151,8 +151,10 @@ function maxMinusMin(x) {
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
 
 function productOfAll(x) {
+    var product = x.reduce((a, b) => a * b, 1);
     
-}
+    return product;
+  }
 
 // Exercise 65
 // Write a function definition named getHighestNumber that takes in sequence of numbers and returns the largest number.
