@@ -151,20 +151,22 @@ function maxMinusMin(x) {
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
 
 function productOfAll(x) {
-    var product = x.reduce((a, b) => a * b, 1);
-    
-    return product;
+    return x.reduce((a, b) => a * b, 1);
   }
 
 // Exercise 65
 // Write a function definition named getHighestNumber that takes in sequence of numbers and returns the largest number.
 
-
+function getHighestNumber(x) {
+    return Math.max.apply(null, x);
+}
 
 // Exercise 66
 // Write a function definition named getSmallestNumber that takes in sequence of numbers and returns the smallest number.
 
-
+function getSmallestNumber(x) {
+    return Math.min.apply(null, x);
+}
 
 // Exercise 67
 // Write a function definition named onlyOddNumbers that takes in sequence of numbers and returns the odd numbers in an array.
