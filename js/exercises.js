@@ -200,13 +200,15 @@ function onlyNegativeNumbers(x) {
 // Write a function definition named hasEvens that takes in sequence of numbers and returns true if there are any even numbers in the sequence
 
 function hasEvens(x) {
-    
+    return x.some((a => a % 2 === 0));
 }
 
 // Exercise 72
 // Write a function definition named countEvens that takes in sequence of numbers and returns the number of even numbers
 
-
+function countEvens(x) {
+    return (x.filter(a => (a % 2 === 0))).length;
+  }
 
 // Exercise 73
 // Write a function definition named hasOdds that takes in sequence of numbers and returns true if there are any odd numbers in the sequence
