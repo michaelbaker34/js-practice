@@ -34,13 +34,24 @@
         return output;
     }
 
-    console.log(returnUserFirstLetters(users)); // "jcb"
+    // console.log(returnUserFirstLetters(users)); // "jcb"
 
     function returnNumberSeven() {
         return 7;
     }
 
-    console.log(returnNumberSeven());
+    // console.log(returnNumberSeven());
+
+    function isFactor(x, y) {
+        if (isNaN(x) || isNaN(y) || typeof (x + y) !== "number") {
+            return false;
+        } else {
+            return x % y === 0;
+        }
+    }
+
+    console.log(isFactor(20, 5));
+    console.log(isFactor("hello", 5));
 
 </script>
 
