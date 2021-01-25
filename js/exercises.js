@@ -213,12 +213,16 @@ function countEvens(x) {
 // Exercise 73
 // Write a function definition named hasOdds that takes in sequence of numbers and returns true if there are any odd numbers in the sequence
 
-
+function hasOdds(x) {
+    return x.some((a => a % 2 !== 0));
+}
 
 // Exercise 74
 // Write a function definition named countOdds that takes in sequence of numbers and returns a count of the any odd numbers in the sequence
 
-
+function countOdds(x) {
+    return (x.filter(a => a % 2 !== 0)).length;
+}
 
 // Exercise 76
 // Write a function definition named countPositives that takes in sequence of numbers and returns a count of the number of positive numbers
