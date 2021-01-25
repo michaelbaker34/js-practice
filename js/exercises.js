@@ -171,27 +171,37 @@ function getSmallestNumber(x) {
 // Exercise 67
 // Write a function definition named onlyOddNumbers that takes in sequence of numbers and returns the odd numbers in an array.
 
-
+function onlyOddNumbers(x) {
+    return x.filter(a => (a % 2 !== 0));
+}
 
 // Exercise 68
 // Write a function definition named onlyEvenNumbers that takes in sequence of numbers and returns the even numbers in an array.
 
-
+function onlyEvenNumbers(x) {
+    return x.filter(a => (a % 2 === 0));
+}
 
 // Exercise 69
 // Write a function definition named onlyPositiveNumbers that takes in sequence of numbers and returns the positive numbers in an array.
 
-
+function onlyPositiveNumbers(x) {
+    return x.filter(a => (a > 0));
+}
 
 // Exercise 70
 // Write a function definition named onlyNegativeNumbers that takes in sequence of numbers and returns the negative numbers in an array.
 
-
+function onlyNegativeNumbers(x) {
+    return x.filter(a => (a < 0));
+}
 
 // Exercise 71
 // Write a function definition named hasEvens that takes in sequence of numbers and returns true if there are any even numbers in the sequence
 
-
+function hasEvens(x) {
+    
+}
 
 // Exercise 72
 // Write a function definition named countEvens that takes in sequence of numbers and returns the number of even numbers
