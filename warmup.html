@@ -9,8 +9,7 @@
 <script>
     "use strict";
 
-   // Create a function, returnUserFirstLetters, that takes in array of user objects and returns a string of the first letters in lowercase of all the user firstName property values.
-
+/* return userFirstLetters */
     var users = [
         {
             age: 24,
@@ -25,7 +24,6 @@
             firstName: 'Bob'
         }
     ];
-
     function returnUserFirstLetters(userArr) {
         var output = '';
         for (var i = 0; i < userArr.length; i += 1) {
@@ -33,15 +31,15 @@
         }
         return output;
     }
-
     // console.log(returnUserFirstLetters(users)); // "jcb"
 
-    function returnNumberSeven() {
+/* returnSeven*/
+    function returnSeven() {
         return 7;
     }
+    // console.log(returnSeven());
 
-    // console.log(returnNumberSeven());
-
+/* isFactor */
     function isFactor(x, y) {
         if (isNaN(x) || isNaN(y) || typeof (x + y) !== "number") {
             return false;
@@ -49,9 +47,25 @@
             return x % y === 0;
         }
     }
+    // console.log(isFactor(20, 5));
+    // console.log(isFactor("hello", 5));
 
-    console.log(isFactor(20, 5));
-    console.log(isFactor("hello", 5));
+/* firstAndLast */
+    // function firstAndLast(x) {
+    //     var first = x[0];
+    //     var last = x[x.length - 1];
+    //
+    //     return [first, last];
+    // }
+
+    function firstAndLast(x) {
+        var newArr = [];
+
+        newArr.push(x[0]);
+        newArr.push(x[x.length - 1]);
+
+        return newArr;
+    }
 
 </script>
 
