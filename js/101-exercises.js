@@ -263,3 +263,80 @@ function onlyNegativeOdds(x) {
     return negativeOdds;
   }
 
+// Exercise 81
+// Write a function definition named shortestString that takes in an array of strings and returns the shortest string in the array.
+
+// Exercise 82
+// Write a function definition named longestString that takes in sequence of strings and returns the longest string in the array.
+
+// Exercise 83
+// Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
+
+// Exercise 84
+// Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
+
+// Exercise 85
+// Write a function named flatten that takes in an array of arrays. Return the flattened array.
+
+// Exercise 86
+// Write a function definition named addOneToArray that adds one to every number in an array
+
+
+// Using the following objects 
+const tukeyPaper = {
+    "title": "The Future of Data Analysis",
+    "author": "John W. Tukey",
+    "link": "https://projecteuclid.org/euclid.aoms/1177704711",
+    "year_published": 1962
+}
+
+const thomasPaper = {
+    "title": "A mathematical model of glutathione metabolism",
+    "author": "Rachel Thomas",
+    "link": "https://www.ncbi.nlm.nih.gov/pubmed/18442411",
+    "year_published": 2008
+}
+
+// Exercise 87
+// Write a function named getPaperTitle that takes in a object and returns the title property
+
+// Exercise 88
+// Write a function named getYearPublished that takes in an objects and returns the value behind the "year_published" key.
+
+const book = {
+    "title": "Genetic Algorithms and Machine Learning for Programmers",
+    "price": 36.99,
+    "author": "Frances Buontempo"
+}
+
+// Exercise 89
+// Write a function named getPrice that takes in a object and returns the price
+
+// Exercise 90
+// Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
+
+const books = [
+    {
+        "title": "Genetic Algorithms and Machine Learning for Programmers",
+        "price": 36.99,
+        "author": "Frances Buontempo"
+    },
+    {
+        "title": "The Visual Display of Quantitative Information",
+        "price": 38.00,
+        "author": "Edward Tufte"
+    },
+    {
+        "title": "Practical Object-Oriented Design",
+        "author": "Sandi Metz",
+        "price": 30.47
+    },
+    {
+        "title": "Weapons of Math Destruction",
+        "author": "Cathy O'Neil",
+        "price": 17.44
+    }
+]
+
+// Exercise 91
+// Write a function named getNumberOfBooks that takes in a array of objects and returns the number of objects in that array.
