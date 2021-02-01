@@ -267,14 +267,15 @@ function onlyNegativeOdds(x) {
 // Write a function definition named shortestString that takes in an array of strings and returns the shortest string in the array.
 
 function shortestString(x) {
-    let compareString = Math.min.apply(Math, arr.map(str => str.length));
+    return x.reduce((a, b) => a.length <= b.length ? a : b);
 }
-// return Math.min.apply(null, x);
 
 // Exercise 82
 // Write a function definition named longestString that takes in sequence of strings and returns the longest string in the array.
 
-
+function longestString(x) {
+    return x.reduce((a, b) => a.length >= b.length ? a : b);
+}
 
 // Exercise 83
 // Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
