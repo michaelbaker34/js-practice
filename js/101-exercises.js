@@ -278,19 +278,25 @@ function longestString(x) {
 }
 
 // Exercise 83
-// Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
+// Write a function definition named getUniqueValues that takes in an array and returns an array with only the unique values from that array.
 
-
+function getUniqueValues(x) {
+    return x.filter((a, b, c) => c.indexOf(a) === b);
+  }
 
 // Exercise 84
 // Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
 
-
+function elementsTimesTwo(x) {
+    return x.map((a) => a * 2);
+  }
 
 // Exercise 85
 // Write a function named flatten that takes in an array of arrays. Return the flattened array.
 
-
+function flatten(x) {
+    return x.flat();
+}
 
 // Exercise 86
 // Write a function definition named addOneToArray that adds one to every number in an array
