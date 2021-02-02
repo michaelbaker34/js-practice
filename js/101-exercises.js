@@ -382,4 +382,97 @@ function getNumberOfBooks(x) {
     return x.length;
   }
 
-  
+// Exercise 92
+// Write a function named totalOfBookPrices that takes in a array of objects and returns the sum total of all the book prices added together
+
+function totalOfBookPrices(x) {
+    return x.map(a => a.price).reduce((a, b) => a + b);
+  }
+
+// Exercise 93
+// Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
+
+function getAverageBookPrice(x) {
+    return x.map(a => a.price).reduce((a, b) => a + b) / x.length;
+  }
+
+// Exercise 94
+// Write a function called highestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the highest priced book.
+
+function highestPriceBook(x) {
+  return x.reduce((a, b) => a.price > b.price ? a : b);
+  }
+
+// Exercise 95
+// Write a function called lowestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the lowest priced book.
+
+function lowestPriceBook(x) {
+    return x.reduce((a, b) => a.price < b.price ? a : b);
+    }
+
+// Exercise 96
+// Write a function named getTaxRate that takes in the above shopping cart as input and returns the tax rate.
+
+function getTaxRate(x) {
+    return x.tax;
+  }
+
+// Exercise 97
+// Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart. 
+
+function numberOfItemTypes(x) {
+    return x.items.length;
+  }
+
+// Exercise 98
+// Write a function named totalNumberOfItems that takes in the shopping cart as input and returns the total number all item quantities.
+
+function totalNumberOfItems(x) {
+    var count = 0;
+    for (let i = 0; i < x.items.length; i += 1) {
+      count = count + x.items[i].quantity
+    }
+    return count;
+  }
+
+// Exercise 99
+// Write a function named getAverageItemPrice that takes in the shopping cart as an input and returns the average of all the item prices.
+
+function getAverageItemPrice(x) {
+    let count = 0;
+    for (let i = 0; i < x.items.length; i += 1) {
+      count = count + x.items[i].price
+    }
+    return count / x.items.length;
+  }
+
+// Exercise 100
+// Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quanties times that item's price.
+
+function getAverageSpentPerItem(x) {
+    let price = 0;
+    let quantity = 0;
+    for (var i = 0; i < x.items.length; i += 1) {
+      price = price + x.items[i].price * x.items[i].quantity;
+      quantity = quantity + x.items[i].quantity;
+    }
+    return price / quantity;
+  }
+
+
+// Exercise 101
+// Write a function named mostSpentOnItem that takes in the shopping cart as input and returns the object associated with the item that has the highest price*quantity.
+
+function mostSpentOnItem(x) {
+    let highest = {
+     "title": "Title",
+     "price": 0,
+     "quantity": 0
+   }
+   for (let i = 0; i < x.items.length; i += 1) {
+     if ((x.items[i].price * x.items[i].quantity) > (highest.price * highest.quantity)) {
+       highest = x.items[i];
+     }
+   }
+   return highest;
+ }
