@@ -319,32 +319,38 @@ const thomasPaper = {
     "link": "https://www.ncbi.nlm.nih.gov/pubmed/18442411",
     "year_published": 2008
 }
-
 // Exercise 87
 // Write a function named getPaperTitle that takes in a object and returns the title property
 
-
+function getPaperTitle(x) {
+    return x.title;
+  }  
 
 // Exercise 88
 // Write a function named getYearPublished that takes in an objects and returns the value behind the "year_published" key.
 
-
+function getYearPublished(x) {
+    return x.year_published;
+  }
 
 const book = {
     "title": "Genetic Algorithms and Machine Learning for Programmers",
     "price": 36.99,
     "author": "Frances Buontempo"
 }
-
 // Exercise 89
 // Write a function named getPrice that takes in a object and returns the price
 
-
+function getPrice(x) {
+    return x.price;
+  }
 
 // Exercise 90
 // Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
 
-
+function getBookAuthor(x) {
+    return x.author;
+  }
 
 const books = [
     {
@@ -371,3 +377,9 @@ const books = [
 
 // Exercise 91
 // Write a function named getNumberOfBooks that takes in a array of objects and returns the number of objects in that array.
+
+function getNumberOfBooks(x) {
+    return x.length;
+  }
+
+  
