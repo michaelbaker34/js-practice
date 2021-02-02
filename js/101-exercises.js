@@ -301,7 +301,9 @@ function flatten(x) {
 // Exercise 86
 // Write a function definition named addOneToArray that adds one to every number in an array
 
-
+function addOneToArray(x) {
+    return x.map(a => a + 1);
+  }  
 
 // Using the following objects 
 const tukeyPaper = {
