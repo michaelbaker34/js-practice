@@ -19,25 +19,13 @@
 /* TODO: add the needed JS so that the number selected in the number input
     will be added to the number in the span */
 // completed
-    // $("#add-btn").on("click", function () {
-    //     let $inputVal = $("#number").val();
-    //     let $spanText = $("#sum-output").text();
-    //     let $newSpanVal = parseInt($inputVal) + parseInt($spanText);
-    //     $("#sum-output").text($newSpanVal);
-    // });
-
     $("#add-btn").on("click", function () {
         let $inputVal = $("#number").val();
         let $spanText = $("#sum-output").text();
         let $newSpanVal = parseInt($inputVal) + parseInt($spanText);
+
         $("#sum-output").text($newSpanVal);
 
-        if ($inputVal !== typeof "int") {
-            $spanText = "0";
-            console.log("true");
-        } else {
-            $("#sum-output").text($newSpanVal);
-        }
     });
 
 </script>
