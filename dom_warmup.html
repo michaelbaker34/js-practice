@@ -40,9 +40,9 @@
 
 // TODO: add the needed JS so that the number selected in the number input will be added to the number in the span
 
-    $('#add-btn').click(function() {
-        var numVal = parseInt($('#number').val());
-        var currVal = parseInt($('#sum-output').text());
+    $('#add-btn').click(() => {
+        let numVal = parseInt($('#number').val());
+        let currVal = parseInt($('#sum-output').text());
         $('#sum-output').text(numVal + currVal);
     });
 
@@ -53,17 +53,16 @@ TODO: add the needed JS so that when the cursor hovers over a letter in the h1 t
  displayed in the span with a class of `title-letter`.
 */
 
+let $targetClass = $(".title-letter");
 $(".letter")
-    .mouseover(function (e) {
-        let targetLetter = $(e.target).text();
-        let targetClass = $(".title-letter");
-        targetClass.append(targetLetter.toLowerCase());
+    .mouseover((e) => {
+        let $targetLetter = $(e.target).text();
+        $targetClass.append($targetLetter.toLowerCase());
     })
-    .mouseout(function (e) {
-        let targetLetter = $(e.target).text();
-        let targetClass = $(".title-letter");
-        targetClass.empty();
+    .mouseout(() => {
+        $targetClass.empty();
     });
+
 
 
 </script>
