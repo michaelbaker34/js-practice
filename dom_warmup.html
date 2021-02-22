@@ -53,17 +53,25 @@ TODO: add the needed JS so that when the cursor hovers over a letter in the h1 t
  displayed in the span with a class of `title-letter`.
 */
 
-let $targetClass = $(".title-letter");
-$(".letter")
-    .mouseover((e) => {
-        let $targetLetter = $(e.target).text();
-        $targetClass.append($targetLetter.toLowerCase());
-    })
-    .mouseout(() => {
-        $targetClass.empty();
-    });
+    let $targetClass = $(".title-letter");
+    $(".letter")
+        .mouseover((e) => {
+            let $targetLetter = $(e.target).text();
+            $targetClass.append($targetLetter.toLowerCase());
+        })
+        .mouseout(() => {
+            $targetClass.empty();
+        });
 
-
+    $("letter").hover(
+         () => {
+            let letter = $(this).text().toLowerCase();
+            $(".title-letter").text(letter);
+        },
+         () => {
+            $(".title-letter").text("");
+        }
+    );
 
 </script>
 
