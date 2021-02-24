@@ -48,18 +48,18 @@
 
     // ============ Basic Example of Promise Creation and Handling
 
-    let goodKid = true;
-
-    // Defining a promise
-    const getCake = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (goodKid) {
-                resolve("Here is some cake");
-            } else {
-                reject("Bad. No cake. :(");
-            }
-        }, 3000);
-    });
+    // let goodKid = true;
+    //
+    // // Defining a promise
+    // const getCake = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         if (goodKid) {
+    //             resolve("Here is some cake");
+    //         } else {
+    //             reject("Bad. No cake. :(");
+    //         }
+    //     }, 3000);
+    // });
     //
     // console.log(getCake); // promise object
     //
@@ -78,31 +78,36 @@
 /* TODO: Refactor the promise by wrapping the conditional logic of whether to resolve or reject
     in a setTimeout so that the promise will only resolve or reject after five seconds.
 */
-    const isGoodDog = false;
-    const haveTreat = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            (isGoodDog) ? resolve("Good dog; have treat") : reject("Bad dog; no treat")
-        }, 5000);
-    });
-
-    haveTreat.then((message) => console.log(message))
-             .catch((message) => console.error(message));
+    // const isGoodDog = true;
+    // const haveTreat = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         (isGoodDog) ? resolve("Good dog; have treat") : reject("Bad dog; no treat")
+    //     }, 5000);
+    // });
+    //
+    // haveTreat.then((message) => console.log(message))
+    //          .catch((message) => console.error(message));
 
 // -------- MINI EXERCISE 2
-/* TODO: using the code from the first mini-exercise, create a function, trainDog, that takes
+/* TODO: using the code from the first mini-exercise, create a function, trainDog,
     that takes in a single boolean argument, isGoodDog, and returns a promise. This promise
     has an identical definition as the haveTreat promise from the previous mini exercise.
  */
+
+    function trainDog(isGoodDog) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                (isGoodDog) ? resolve("Good dog; have treat") : reject("Bad dog; no treat");
+            }, 5000);
+        });
+    }
+
 /* TODO: invoke the trainDog function passing in true as and argument
-    chain then and catch methods to handle the returned promise. Refactor
+    chain then add catch methods to handle the returned promise. Refactor
     to pass in false to the function.
  */
-
-
-
-
-
-
+    trainDog(true).then((message) => console.log(message))
+                  .catch((message) => console.log(message));
 
     // ====================================== FETCH API
 
