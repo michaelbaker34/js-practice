@@ -12,7 +12,6 @@
     <div id="articles"></div>
 
 </main>
-<script src="js/keys.js"></script>
 <script
         src="https://code.jquery.com/jquery-3.4.0.min.js"
         integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
@@ -73,30 +72,36 @@
 
     // -------- MINI EXERCISE 1
 
-    // const isGoodDog = true;
+    const isGoodDog = true;
 
-    /* TODO: Uncomment the line above then create a promise, haveTreat, that resolves with the string 'Good dog; have treat'
-        if the above constant is assigned to true and and rejects with the string 'Bad dog; no treat' if assigned false.
-     */
+/* TODO: Uncomment the line above then create a promise, haveTreat, that resolves with the string 'Good dog; have treat'
+    if the above constant is assigned to true and and rejects with the string 'Bad dog; no treat' if assigned false.
+*/
+// TODO: handle the promise by console logging the result if resolved or rejected
+/* TODO: Refactor the promise by wrapping the conditional logic of whether to resolve or reject
+    in a setTimeout so that the promise will only resolve or reject after five seconds.
+*/
+    const haveTreat = new Promise((resolve, reject) =>
+        setTimeout(() =>
+            (isGoodDog) ? resolve("Good dog; have treat") : reject("Bad dog; no treat"))
+        , 5000);
 
-    // TODO: handle the promise by console logging the result if resolved or rejected
+    haveTreat.then((message) => console.log(message))
+            .catch((message) => console.log(message));
 
 
-    /* TODO: Refactor the promise above by wrapping the conditional logic of whether to resolve or reject
-        in a setTimeout so that the promise will only resolve or reject after five seconds.
-    */
 
-    // -------- MINI EXERCISE 2
+// -------- MINI EXERCISE 2
 
-    /* TODO: using the code from the first mini-exercise, create a function, trainDog, that takes
-        that takes in a single boolean argument, isGoodDog, and returns a promise. This promise
-        has an identical definition as the haveTreat promise from the previous mini exercise.
-     */
+/* TODO: using the code from the first mini-exercise, create a function, trainDog, that takes
+    that takes in a single boolean argument, isGoodDog, and returns a promise. This promise
+    has an identical definition as the haveTreat promise from the previous mini exercise.
+ */
 
-    /* TODO: invoke the trainDog function passing in true as and argument
-        chain then and catch methods to handle the returned promise. Refactor
-        to pass in false to the function.
-     */
+/* TODO: invoke the trainDog function passing in true as and argument
+    chain then and catch methods to handle the returned promise. Refactor
+    to pass in false to the function.
+ */
 
 
 
@@ -295,22 +300,6 @@
     //
     // getColor().then(response => response.json()).then(data => console.log(data));
     //
-
-
-    // -------- MINI EXERCISE 1
-
-    // const isGoodDog = true;
-
-    /* TODO: Uncomment the line above then create a promise, haveTreat, that resolves with the string 'Good dog; have treat'
-        if the above constant is assigned to true and and rejects with the string 'Bad dog; no treat' if assigned false.
-     */
-
-    // TODO: handle the promise by console logging the result if resolved or rejected
-
-
-    /* TODO: Refactor the promise above by wrapping the conditional logic of whether to resolve or reject
-        in a setTimeout so that the promise will only resolve or reject after five seconds.
-    */
 
 </script>
 
