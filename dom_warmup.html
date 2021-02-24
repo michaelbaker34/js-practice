@@ -80,9 +80,9 @@
      */
 
     $(".bg-colors").dblclick((e) => {
-            let backgroundColor = e.target.innerText;
-            $("body").css("background-color", backgroundColor);
-            console.log(backgroundColor);
+            let $backgroundColor = $(e.target).text();
+            $("body").css("background-color", $backgroundColor);
+            console.log($backgroundColor);
         });
 
 </script>
