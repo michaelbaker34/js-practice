@@ -97,7 +97,8 @@
     function trainDog(isGoodDog) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                (isGoodDog) ? resolve("Good dog; have treat") : reject("Bad dog; no treat");
+                (isGoodDog) ? resolve("Good dog; have treat") :
+                              reject("Bad dog; no treat");
             }, 5000);
         });
     }
