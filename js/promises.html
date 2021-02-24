@@ -48,18 +48,18 @@
 
     // ============ Basic Example of Promise Creation and Handling
 
-    // let goodKid = true;
-    //
-    // // Defining a promise
-    // const getCake = new Promise((resolve, reject) => {
-    //     // setTimeout(() => {
-    //         if (goodKid) {
-    //             resolve("Here is some cake");
-    //         } else {
-    //             reject("Bad. No cake. :(");
-    //         }
-    //     // }, 3000);
-    // });
+    let goodKid = true;
+
+    // Defining a promise
+    const getCake = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (goodKid) {
+                resolve("Here is some cake");
+            } else {
+                reject("Bad. No cake. :(");
+            }
+        }, 3000);
+    });
     //
     // console.log(getCake); // promise object
     //
@@ -79,10 +79,11 @@
     in a setTimeout so that the promise will only resolve or reject after five seconds.
 */
     const isGoodDog = false;
-    const haveTreat = new Promise((resolve, reject) =>
-        setTimeout(() =>
-            (isGoodDog) ? resolve("Good dog; have treat") : reject("Bad dog; no treat"))
-        , 5000);
+    const haveTreat = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            (isGoodDog) ? resolve("Good dog; have treat") : reject("Bad dog; no treat")
+        }, 5000);
+    });
 
     haveTreat.then((message) => console.log(message))
              .catch((message) => console.error(message));
