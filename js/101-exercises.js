@@ -139,10 +139,10 @@ function median(x) {
 // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus the minimum.
 
 function maxMinusMin(x) {
-    var sortArr = x.sort();
-    var max = x[x.length - 1];
-    var min = x[0];
-    var difference = parseInt(max) - parseInt(min);
+    let sortArr = x.sort();
+    let max = x[x.length - 1];
+    let min = x[0];
+    let difference = parseInt(max) - parseInt(min);
     
     return difference;
   }
