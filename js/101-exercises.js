@@ -69,9 +69,9 @@ function firstAndSecond(x) {
 // and returns the first and last value of that sequence as an array
 
 function firstAndLast(x) {
-    var first = x[0];
-    var last = x[x.length - 1];
-    var newArr = [first, last];
+    let first = x[0];
+    let last = x[x.length - 1];
+    let newArr = [first, last];
   
   return newArr;
 }
@@ -80,8 +80,8 @@ function firstAndLast(x) {
 // Write a function definition named firstToLast that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
 
 function firstToLast(x) {
-    var newArr = [];
-    var arrShift = x.shift();
+    let newArr = [];
+    let arrShift = x.shift();
   
     newArr = x.push(arrShift);
   
@@ -92,12 +92,12 @@ function firstToLast(x) {
 // Write a function definition named sumAll that takes in sequence of numbers and returns all the numbers added together.
 
 function sumAll(x) {
-    var sum = x.reduce((a, b) => a + b, 0);
+    let sum = x.reduce((a, b) => a + b, 0);
     return sum;
 }
 
 // function sumAll(x) {
-//     var i = 0
+//     let i = 0
 //     x.forEach(function(element) {
 //     i += element;  
 //     });
@@ -109,12 +109,12 @@ function sumAll(x) {
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
 
 function mean(x) {
-    var sum = x.reduce((a, b) => a + b, 0) / x.length;
+    let sum = x.reduce((a, b) => a + b, 0) / x.length;
     return sum;
 }
 
 // function mean(x) {
-//     var i = 0;
+//     let i = 0;
 //     x.forEach(function(element) {
 //       i += element;
 //     })
@@ -127,9 +127,9 @@ function mean(x) {
 // Write a function definition named median that takes in sequence of numbers and returns the median value
 
 function median(x) {
-    var sortArr = x.sort();
-    var middleElement = Math.ceil(x.length / 2);
-    var medianElement = x.length % 2 == 0 ? (sortArr[middleElement] + sortArr[middleElement - 1]) / 2 : sortArr[middleElement - 1];
+    let sortArr = x.sort();
+    let middleElement = Math.ceil(x.length / 2);
+    let medianElement = x.length % 2 == 0 ? (sortArr[middleElement] + sortArr[middleElement - 1]) / 2 : sortArr[middleElement - 1];
   
     return medianElement
 }
@@ -139,10 +139,10 @@ function median(x) {
 // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus the minimum.
 
 function maxMinusMin(x) {
-    var sortArr = x.sort();
-    var max = x[x.length - 1];
-    var min = x[0];
-    var difference = parseInt(max) - parseInt(min);
+    let sortArr = x.sort();
+    let max = x[x.length - 1];
+    let min = x[0];
+    let difference = parseInt(max) - parseInt(min);
     
     return difference;
   }
@@ -428,7 +428,7 @@ function numberOfItemTypes(x) {
 // Write a function named totalNumberOfItems that takes in the shopping cart as input and returns the total number all item quantities.
 
 function totalNumberOfItems(x) {
-    var count = 0;
+    let count = 0;
     for (let i = 0; i < x.items.length; i += 1) {
       count = count + x.items[i].quantity
     }
@@ -452,7 +452,7 @@ function getAverageItemPrice(x) {
 function getAverageSpentPerItem(x) {
     let price = 0;
     let quantity = 0;
-    for (var i = 0; i < x.items.length; i += 1) {
+    for (let i = 0; i < x.items.length; i += 1) {
       price = price + x.items[i].price * x.items[i].quantity;
       quantity = quantity + x.items[i].quantity;
     }
