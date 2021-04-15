@@ -109,8 +109,7 @@ function sumAll(x) {
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
 
 function mean(x) {
-    let sum = x.reduce((a, b) => a + b, 0) / x.length;
-    return sum;
+    return x.reduce((a, b) => a + b, 0) / x.length;
 }
 
 // function mean(x) {
@@ -129,9 +128,7 @@ function mean(x) {
 function median(x) {
     let sortArr = x.sort();
     let middleElement = Math.ceil(x.length / 2);
-    let medianElement = x.length % 2 == 0 ? (sortArr[middleElement] + sortArr[middleElement - 1]) / 2 : sortArr[middleElement - 1];
-  
-    return medianElement
+    return x.length % 2 === 0 ? (sortArr[middleElement] + sortArr[middleElement - 1]) / 2 : sortArr[middleElement - 1]
 }
 
 
@@ -142,9 +139,7 @@ function maxMinusMin(x) {
     let sortArr = x.sort();
     let max = x[x.length - 1];
     let min = x[0];
-    let difference = parseInt(max) - parseInt(min);
-    
-    return difference;
+    return parseInt(max) - parseInt(min);
   }
 
 // Exercise 64
