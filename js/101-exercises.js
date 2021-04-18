@@ -71,9 +71,7 @@ function firstAndSecond(x) {
 function firstAndLast(x) {
     let first = x[0];
     let last = x[x.length - 1];
-    let newArr = [first, last];
-  
-  return newArr;
+    return [first, last];
 }
 
 // Exercise 59
