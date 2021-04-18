@@ -230,32 +230,28 @@ function countPositives(x) {
 // Write a function definition named onlyPositiveEvens that takes in sequence of numbers and returns an array containing all the positive evens from the sequence
 
 function onlyPositiveEvens(x) {
-    let positiveEvens = x.filter(a => (a > 0 && a % 2 === 0));
-    return positiveEvens;
+    return x.filter(a => (a > 0 && a % 2 === 0));
   }
 
 // Exercise 78
 // Write a function definition named onlyPositiveOdds that takes in sequence of numbers and returns an array containing all the positive odd numbers from the sequence
 
 function onlyPositiveOdds(x) {
-    let positiveOdds = x.filter(a => (a > 0 && a % 2 !== 0));
-    return positiveOdds;
+    return x.filter(a => (a > 0 && a % 2 !== 0));
   }
 
 // Exercise 79
 // Write a function definition named onlyNegativeEvens that takes in sequence of numbers and returns an array containing all the negative even numbers from the sequence
 
 function onlyNegativeEvens(x) {
-    let negativeEvens = x.filter(a => (a < 0 && a % 2 === 0));
-    return negativeEvens;
+    return x.filter(a => (a < 0 && a % 2 === 0));
   }
 
 // Exercise 80
 // Write a function definition named onlyNegativeOdds that takes in sequence of numbers and returns an array containing all the negative odd numbers from the sequence
 
 function onlyNegativeOdds(x) {
-    let negativeOdds = x.filter(a => (a < 0 && a % 2 !== 0));
-    return negativeOdds;
+    return x.filter(a => (a < 0 && a % 2 !== 0));
   }
 
 // Exercise 81
