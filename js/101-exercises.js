@@ -80,7 +80,7 @@ function firstAndLast(x) {
 // Write a function definition named firstToLast that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
 
 function firstToLast(x) {
-    let newArr = [];
+    let newArr;
     let arrShift = x.shift();
   
     newArr = x.push(arrShift);
@@ -92,8 +92,7 @@ function firstToLast(x) {
 // Write a function definition named sumAll that takes in sequence of numbers and returns all the numbers added together.
 
 function sumAll(x) {
-    let sum = x.reduce((a, b) => a + b, 0);
-    return sum;
+    return x.reduce((a, b) => a + b, 0);
 }
 
 // function sumAll(x) {
