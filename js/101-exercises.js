@@ -209,6 +209,7 @@ function hasOdds(x) {
     return x.some((a => a % 2 !== 0));
 }
 
+
 // Exercise 74
 // Write a function definition named countOdds that takes in sequence of numbers and returns a count of the any odd numbers in the sequence
 
